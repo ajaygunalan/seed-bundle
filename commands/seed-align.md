@@ -15,7 +15,7 @@ $ARGUMENTS
 - If the repo depends on math/controls/ML, put durable derivations/contracts in `algorithms/*.md` and only **index** them from `SPEC.md`.
 - In `SPEC.md` → “System Invariants”, separate:
   - **External Contracts** (must match users/neighbor repos/libraries/hardware)
-  - **Internal Conventions** (repo-local; can change if you update all internal call sites)
+  - **Internal Conventions** (repo-local contracts: paths/names, responsibilities, data formats; changing requires updating internal references)
 - Constants belong in `algorithms/*.md` as **Defaults (tunable)**, not as “contracts”, unless the user explicitly says they are fixed.
 - If a mismatch implies a choice (change code vs change seed docs), ask the user; don’t guess.
 - If uncertain, write an **assumption** or **open question**, not a fact.
@@ -43,7 +43,7 @@ $ARGUMENTS
    - Interfaces/contracts (what must remain stable)
    - Acceptance signals (how we know it’s correct)
    - Decisions + assumptions + open questions
-6. Ensure `CLAUDE.md` has a minimal “Docs map” pointer (don’t rewrite it). If `CLAUDE.md` is missing, create a minimal one containing only these pointers:
+6. Ensure `CLAUDE.md` has a minimal “Docs map” pointer. If `CLAUDE.md` exists, add/update only these pointer lines (don’t rewrite unrelated content). If `CLAUDE.md` is missing, create a minimal one containing only these pointers:
    - “Blueprint: `SPEC.md`”
    - “Math contracts: `algorithms/` (see `SPEC.md` → Algorithm Index)”
    - “Session continuity: `RESUME.md` (Reheat), if present”

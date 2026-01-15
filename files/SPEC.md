@@ -31,7 +31,7 @@ Inbound constraints you must match (users/neighbor repos/libraries/hardware). Av
 
 ### Internal Conventions (breaking these breaks ourselves)
 
-- [Repo-local conventions and data formats. Safe to change if you update all internal call sites.]
+- [Repo-local contracts (file names/paths, responsibilities, data formats). Changing these requires updating internal references.]
 
 ## Behavior (what it must do)
 
@@ -66,6 +66,8 @@ Outbound interfaces this repo defines (what others may depend on). If something 
   - [File] — schema/fields — meaning
 
 ## Repo Blueprint (key file map)
+
+Treat file paths listed here as repo-local contracts: renaming/moving requires updating internal references.
 
 ```text
 # Keep this as the minimal “shape of the repo”.
